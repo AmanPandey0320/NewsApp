@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".signup">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/round_layout_below"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ProgressBar
+            android:id="@+id/sign_in_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="158dp"
+        android:layout_height="183dp"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout2"
+        app:layout_constraintEnd_toStartOf="@+id/constraintLayout2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+        app:srcCompat="@drawable/app_start" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign-In"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:textSize="23dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@id/sign_in_card"
+        app:layout_constraintStart_toStartOf="@id/sign_in_card"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/sign_in_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraintLayout2">
+
+        <EditText
+            android:id="@+id/signin_email_txt"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:hint="Email-ID"
+            android:inputType="text"
+            android:textCursorDrawable="@color/colorPrimary"
+            android:backgroundTint="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="@+id/sign_in_card"
+            app:layout_constraintStart_toStartOf="@+id/sign_in_card"
+            app:layout_constraintTop_toTopOf="@+id/sign_in_card" />
+
+        <EditText
+            android:id="@+id/signin_password_txt"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textCursorDrawable="@color/colorPrimary"
+            android:layout_marginStart="2dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:hint="Password"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="@+id/sign_in_card"
+            app:layout_constraintStart_toStartOf="@+id/sign_in_card"
+            app:layout_constraintTop_toBottomOf="@+id/signin_email_txt" />
+        <Button
+            android:id="@+id/sign_in_btn"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Sign-In"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/colorAccent"
+            android:textSize="16dp"
+            android:background="@drawable/rounnd_btn"
+            app:layout_constraintStart_toStartOf="@id/sign_in_card"
+            app:layout_constraintEnd_toEndOf="@id/sign_in_card"
+            app:layout_constraintTop_toBottomOf="@id/signin_password_txt"/>
+
+        <TextView
+            android:id="@+id/sign_in_or"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OR"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16dp"
+            android:layout_marginTop="25dp"
+            app:layout_constraintEnd_toEndOf="@id/sign_in_card"
+            app:layout_constraintStart_toStartOf="@+id/sign_in_card"
+            app:layout_constraintTop_toBottomOf="@id/sign_in_btn"/>
+        <ImageView
+            android:id="@+id/google_in"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="@id/sign_in_card"
+            app:layout_constraintEnd_toEndOf="@id/sign_in_card"
+            android:src="@drawable/google"
+            app:layout_constraintTop_toBottomOf="@+id/sign_in_or"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="33dp"
+        android:background="@drawable/round_layout_top"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/reset_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forgot Password :("
+            android:textColor="@color/colorAccent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
