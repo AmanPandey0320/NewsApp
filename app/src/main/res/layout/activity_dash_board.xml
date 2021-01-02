@@ -17,7 +17,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:titleMarginStart="2dp"
-        app:title="Khabari-Lal"
+        app:title="Khabari"
         app:logo="@drawable/app_icon"
         app:titleTextColor="@color/white">
 
